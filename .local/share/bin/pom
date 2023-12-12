@@ -50,6 +50,8 @@ def main():
         return
     
     go_to_sleep(int(args.time))
+    # play a beep sound
+    print('\a')
 
 
 if __name__ == "__main__":
