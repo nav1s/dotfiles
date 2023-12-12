@@ -10,7 +10,7 @@ LOG_PATH = os.environ['XDG_CACHE_HOME']
 
 logging.basicConfig(
         level=logging.INFO,
-        filename=f'{LOG_PATH}/pom/{time.strftime("%d.%m.%y")}.log',
+        filename=f'{LOG_PATH}/pom/log.txt',
         filemode='a',
         format="%(asctime)s: %(message)s",
         datefmt='%H:%M:%S'
@@ -21,7 +21,8 @@ notify2.init('pom')
 def timeup_notification():
     title = 'Time Up'
     notice = notify2.Notification(title)
-    notice.set_urgency(notify2.URGENCY_CRITICAL)
+    notice.set_urgency(notify2.URGENCY_NORMAL)
+    notice.set_timeout(60000)
     notice.show()
 
 def get_args():
