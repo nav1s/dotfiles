@@ -12,6 +12,6 @@ xidlehook \
     'i3lock -c 000000 --keylayout 2' \
     '' \
   `# Finally, suspend an hour after it locks` \
-  --timer 3600 \
-    'systemctl suspend' \
-    ''
+ #  --timer 3600 \
+ #    'systemctl suspend' \
+ #    ''
