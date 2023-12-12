@@ -18,6 +18,17 @@ function xc
 	echo $argv | xclip -sel clipboard
 end
 
+function while1
+	set --function cmd $argv  
+	while test 1 -eq 1
+    eval $cmd
+    if test $status -eq 0
+      break
+    end
+    sleep 1
+    end
+end
+
 # setup command completions
 complete -c cht.sh -xa '$(cht.sh :list)'
 complete -c tldr -xa (tldr --list | sed 's/\W/ /g')
