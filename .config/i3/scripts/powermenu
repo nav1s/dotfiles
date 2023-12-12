@@ -30,6 +30,7 @@
 
 # Use a custom lock script
 #LOCKSCRIPT="i3lock-extra -m pixelize"
+LOCKSCRIPT="i3lock --pass-media-keys --color 000000 --keylayout 2 && playerctl --player=spotify pause"
 
 # Colors: FG (foreground), BG (background), HL (highlighted)
 FG_COLOR="#bbbbbb"
@@ -118,7 +119,8 @@ menu=(
   [ Reboot]="systemctl reboot -i"
   [ Suspend]="systemctl suspend"
   [ Hibernate]="systemctl hibernate"
-  [ Lock]="~/.config/i3/scripts/blur-lock"
+  # [ Lock]="~/.config/i3/scripts/blur-lock"
+  [ Lock]=$LOCKSCRIPT
   [ Logout]="pkill -u $USER"
   [ Cancel]=""
 )
