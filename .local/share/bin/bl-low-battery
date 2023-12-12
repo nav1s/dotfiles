@@ -1,0 +1,17 @@
+#!/usr/bin/env fish
+# rewrite of scripts from https://unix.stackexchange.com/questions/60778/how-can-i-get-an-alert-when-my-battery-is-about-to-die-in-linux-mint
+
+set LOW_BATTERY 40
+set ICON /usr/share/icons/Qogir/22/panel/battery-low.svg
+
+set battery_level (
+bluetoothctl info | \
+grep --only-matching --extended-regexp '\([0-9]{2}\)' | \
+string replace '(' '' | \
+string replace ')' ''
+)
+
+if test -n $battery_level && test $battery_level -le $LOW_BATTERY
+    notify-send --urgency critical --icon "$ICON" --expire-time 3000 "Battery low" "Battery level is $battery_level%!"
+end
+
