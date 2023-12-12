@@ -1,0 +1,5 @@
+configuration {
+	combi-modi: [window,drun,run,ssh];
+	show-icons: true;
+}
+@theme: "/usr/share/rofi/themes/glue_pro_blue.rasi"
