@@ -75,7 +75,7 @@ abbr --add -- ha 'hledger iadd'
 # yadm
 abbr --add -- y yadm
 abbr --add -- ya 'yadm add'
-abbr --add -- yst 'yadm status'
+abbr --add -- ys 'yadm status'
 abbr --add -- yr 'yadm reset'
 abbr --add -- yap 'yadm add -p'
 abbr --add -- yp 'yadm push'
