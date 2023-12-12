@@ -10,8 +10,12 @@ function s
 end
 
 function t
-    set --function result (command tere $argv)
-    [ -n "$result" ] && cd -- "$result"
+	set --function result (command tere $argv)
+	[ -n "$result" ] && cd -- "$result"
+end
+
+function xc
+	echo $argv | xclip -sel clipboard
 end
 
 # setup command completions
@@ -20,4 +24,7 @@ complete -c tldr -xa (tldr --list | sed 's/\W/ /g')
 
 # set ledger journal path
 set --global --export LEDGER_FILE "$HOME/Notes/finance/hledger/journal/current.journal"
+
+# add extra funcs
+source ~/.config/fish/funcs.fish
 
