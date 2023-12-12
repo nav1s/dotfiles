@@ -7,9 +7,9 @@ xidlehook \
   --timer 600 \
     'notify-send "Lock sequence initiated"' \
     '' \
-  `# Undim & lock after 10 more seconds` \
+  `# Undim & lock after 60 more seconds` \
   --timer 60 \
-    'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; i3lock' \
+    'i3lock -c 000000 --keylayout 2' \
     '' \
   `# Finally, suspend an hour after it locks` \
   --timer 3600 \
