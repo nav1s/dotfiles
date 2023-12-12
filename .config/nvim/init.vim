@@ -65,3 +65,5 @@ set undolevels=10000
 " save as root
 cmap w!! w !sudo tee > /dev/null %
 
+" vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
