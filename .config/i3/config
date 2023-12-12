@@ -24,9 +24,6 @@
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango: Noto Sans Regular 10
 
-# set the mod key to the winkey:
-set $mod Mod4
-
 ##########################################
 # configuration for workspace behaviour: #
 ##########################################
