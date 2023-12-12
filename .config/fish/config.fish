@@ -51,14 +51,15 @@ abbr --add -- swd 'pwd > /tmp/termwd'
 abbr --add -- hx helix
 
 # zfs
-abbr --add -- zlt "zfs list -t snapshot | rg --invert-match 'docker'"
-abbr --add -- zl "zfs list | rg --invert-match 'docker'"
+abbr --add -- zlt "zfs list -t snapshot | rg --invert-match 'var'"
+abbr --add -- zl "zfs list | rg --invert-match 'var'"
 
 # docker
 abbr --add -- d 'docker'
 abbr --add -- dc 'docker compose'
-abbr --add -- dcu 'docker compose up -d'
+abbr --add -- dco 'docker compose up -d'
 abbr --add -- dcp 'docker compose pull'
+abbr --add -- dcl 'docker compose logs'
 
 # hledger
 abbr --add -- h hledger
