@@ -20,7 +20,9 @@ end
 
 # setup command completions
 complete -c cht.sh -xa '$(cht.sh :list)'
-complete -c tldr -xa (tldr --list | sed 's/\W/ /g')
+# complete -c tldr -xa (tldr --list | sed 's/\W/ /g')
+# from https://gist.github.com/soraxas/00b7e3f8342e81d2b1908e91c0eb2a9d
+complete -x -c tldr -a '(printf "%s\n" ~/.cache/tldr/pages/**/*.md | sed -r "s:^.*/([^/]*)/([^/]*)\.md:\2\t\1:")'
 
 ## Variables ##
 # set the shell to fish to drop into it when using ranger and su
