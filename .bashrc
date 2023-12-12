@@ -51,4 +51,3 @@ export GTK_THEME=Arc:dark
 # set multitouch
 # https://askubuntu.com/questions/536663/how-can-i-get-firefox-to-recognize-multitouch-gestures-on-a-touch-screen
 export MOZ_USE_XINPUT2=1
-
