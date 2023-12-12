@@ -95,3 +95,10 @@ abbr adi adb install
 abbr add adb devices   
 abbr ads adb shell   
 abbr adp adb pull
+
+# pacman
+abbr pf pacman --files
+abbr ps pacman --sync
+abbr pr pacman --remove
+abbr pu pacman --upgrade
+abbr pq pacman --query
