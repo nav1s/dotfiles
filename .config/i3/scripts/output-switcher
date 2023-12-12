@@ -1,0 +1,16 @@
+#/bin/bash
+
+# small script to set default output device
+case $1 in
+
+	"headphones")
+	sink=$(pactl list sinks short | awk 'NR == 1 {print $1}')
+	;;
+	"speakers")
+	sink=$(pactl list sinks short | awk 'NR == 2 {print $1}')
+	;;
+
+esac
+
+pactl set-default-sink $sink
+
