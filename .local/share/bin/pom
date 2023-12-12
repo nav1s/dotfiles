@@ -1,20 +1,16 @@
 #!/usr/bin/env python
-from time import sleep
 from alive_progress import alive_it
-from threading import Thread
-import os
 import time
+import os
 import notify2
 import argparse
 import logging
 
-# get script dir
-real_path = os.path.realpath(__file__)
-dir_path = os.path.dirname(real_path)
+LOG_PATH = os.environ['XDG_CACHE_HOME']
 
 logging.basicConfig(
         level=logging.INFO,
-        filename=f'{dir_path}/{os.getlogin()}/{time.strftime("%d.%m.%y")}.log',
+        filename=f'{LOG_PATH}/pom/{time.strftime("%d.%m.%y")}.log',
         filemode='a',
         format="%(asctime)s: %(message)s",
         datefmt='%H:%M:%S'
@@ -23,7 +19,7 @@ logging.basicConfig(
 notify2.init('pom')
 
 def timeup_notification():
-    title = 'Time up'
+    title = 'Time Up'
     notice = notify2.Notification(title)
     notice.set_urgency(notify2.URGENCY_CRITICAL)
     notice.show()
@@ -38,7 +34,7 @@ def go_to_sleep(wait_time):
 
     for _ in bar:
         try:
-            sleep(1)
+            time.sleep(1)
         except KeyboardInterrupt:
             bar.pause()
             bar.text('Press any key to continue .....')
