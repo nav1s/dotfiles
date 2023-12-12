@@ -36,6 +36,7 @@ export GOPATH="$XDG_DATA_HOME/go"
 export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 export TS_NODE_HISTORY="$XDG_STATE_HOME"/ts_node_repl_history
+export PYTHONSTARTUP="/etc/python/pythonrc"
 
 # gui stuff
 
