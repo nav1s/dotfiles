@@ -25,15 +25,15 @@ complete -c cht.sh -xa '$(cht.sh :list)'
 complete -x -c tldr -a '(printf "%s\n" ~/.cache/tldr/pages/**/*.md | sed -r "s:^.*/([^/]*)/([^/]*)\.md:\2\t\1:")'
 
 ## Variables ##
-# set the shell to fish to drop into it when using ranger and su
+# set the shell to fish to drop into it when using ranger, su and tmux
 set --global --export SHELL "/usr/bin/fish"
 # set ledger journal path
-set --global --export LEDGER_FILE "$HOME/Notes/finance/hledger/journal/current.journal"
+set --global --export LEDGER_FILE ~/Notes/finance/hledger/journal/current.journal
 
 ## Abbreviations ##
 
 # general
-abbr --add -- wget 'wget --hsts-file=/home/user/.local/share/wget-hsts'
+abbr --add -- wget 'wget --hsts-file=~/.local/share/wget-hsts'
 abbr --add -- l lsd
 abbr --add -- ll 'lsd -lah'
 abbr --add -- ls 'lsd -lah'
