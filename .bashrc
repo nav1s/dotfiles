@@ -20,7 +20,7 @@ export HISTFILE="$XDG_STATE_HOME/bash/history"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
-export XCURSOR_PATH=/usr/share/icons:"$XDG_DATA_HOME/icons"
+export XCURSOR_PATH="/usr/share/icons:$XDG_DATA_HOME/icons"
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"
@@ -32,6 +32,10 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME/platformio"
 export ANDROID_SDK_ROOT="$XDG_DATA_HOME/android/Sdk"
+export GOPATH="$XDG_DATA_HOME/go"
+export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
+export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
+export TS_NODE_HISTORY="$XDG_STATE_HOME"/ts_node_repl_history
 
 # gui stuff
 
