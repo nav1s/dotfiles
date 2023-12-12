@@ -90,3 +90,8 @@ abbr --add -- gr 'git reset'
 abbr --add -- gp 'git push'
 abbr --add -- gd 'git diff'
 
+# adb
+abbr adi adb install
+abbr add adb devices   
+abbr ads adb shell   
+abbr adp adb pull
