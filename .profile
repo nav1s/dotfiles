@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # set default programs
-export TERMINAL=kitty
 export EDITOR=nvim
 export BROWSER=firefox
 
@@ -41,3 +40,4 @@ export QT_STYLE_OVERRIDE=kvantum
 
 # set GTK theme
 export GTK_THEME=Arc:dark
+
