@@ -26,6 +26,7 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java
 export SQLITE_HISTORY=$XDG_CACHE_HOME/sqlite_history
 export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
 export LESSHISTFILE=$XDG_STATE_HOME/less/history
+export NUGET_PACKAGES=$XDG_CACHE_HOME/NuGetPackages
 
 # gui stuff
 
