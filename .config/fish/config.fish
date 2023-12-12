@@ -44,7 +44,7 @@ abbr --add -- l lsd
 abbr --add -- ll 'lsd -lah'
 abbr --add -- ls 'lsd -lah'
 abbr --add -- rm trash
-abbr --add -- ssh 'env TERM=xterm-256color ssh'
+abbr --add -- st 'env TERM=xterm-256color ssh'
 abbr --add -- rwd 'cd (cat /tmp/termwd)'
 abbr --add -- ssh-keygen 'ssh-keygen -t ed25519'
 abbr --add -- cp 'cpg -g'
@@ -63,8 +63,10 @@ abbr --add -- zlt "zfs list -t snapshot | rg --invert-match 'docker'"
 abbr --add -- zl "zfs list | rg --invert-match 'docker'"
 
 # docker
+abbr --add -- d 'docker'
 abbr --add -- dc 'docker compose'
-abbr --add -- dco 'docker compose up -d'
+abbr --add -- dcu 'docker compose up -d'
+abbr --add -- dcp 'docker compose pull'
 
 # hledger
 abbr --add -- h hledger
@@ -73,7 +75,7 @@ abbr --add -- ha 'hledger iadd'
 # yadm
 abbr --add -- y yadm
 abbr --add -- ya 'yadm add'
-abbr --add -- ys 'yadm status'
+abbr --add -- yst 'yadm status'
 abbr --add -- yr 'yadm reset'
 abbr --add -- yap 'yadm add -p'
 abbr --add -- yp 'yadm push'
