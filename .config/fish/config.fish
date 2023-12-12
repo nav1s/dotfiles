@@ -33,6 +33,9 @@ end
 complete -c cht.sh -xa '$(cht.sh :list)'
 complete -c tldr -xa (tldr --list | sed 's/\W/ /g')
 
+## Variables ##
+# set the shell to fish to drop into it when using ranger and su
+set --global --export SHELL "/usr/bin/fish"
 # set ledger journal path
 set --global --export LEDGER_FILE "$HOME/Notes/finance/hledger/journal/current.journal"
 
