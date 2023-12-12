@@ -7,7 +7,7 @@ case $1 in
 	sink=$(pactl list sinks short | grep "Kingston_HyperX_7.1_Audio" | awk '{print $1}')
 	;;
 	"speakers")
-	sink=$(pactl list sinks short | grep "pci" | awk '{print $1}')
+	sink=$(pactl list sinks short | grep "6.analog-stereo" | awk '{print $1}')
 	;;
 
 esac
