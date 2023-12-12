@@ -2,7 +2,7 @@
 img_path='/home/aviv/Pictures/Wallpapers/Abstract/Unsplash'
 
 url="https://source.unsplash.com/1920x1080/?"
-query="abstract"
+query="abstract wallpaper"
 
 # generate a new filename per our schema
 num=0
