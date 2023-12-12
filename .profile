@@ -27,6 +27,10 @@ export SQLITE_HISTORY=$XDG_CACHE_HOME/sqlite_history
 export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
 export LESSHISTFILE=$XDG_STATE_HOME/less/history
 export NUGET_PACKAGES=$XDG_CACHE_HOME/NuGetPackages
+export CALCHISTFILE=$XDG_CACHE_HOME/calc_history
+export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
+export NODE_REPL_HISTORY=$XDG_DATA_HOME/node_repl_history
+export PLATFORMIO_CORE_DIR=$XDG_DATA_HOME/platformio
 
 # gui stuff
 
