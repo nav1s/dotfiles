@@ -1,14 +1,3 @@
-# use qemu cmd to enable ssh in virsh
-function s
-	set --function domain $argv[1]
-	if test -z "$domain"
-		echo "Missing domain"
-		return
-	end
-	virsh start $domain 
-	virsh qemu-monitor-command $domain --hmp --cmd "hostfwd_add tcp::2222-:22"
-end
-
 function t
 	set --function result (command tere $argv)
 	[ -n "$result" ] && cd -- "$result"
@@ -97,7 +86,4 @@ abbr --add -- gcd 'git clone --depth 1'
 abbr --add -- gr 'git reset'
 abbr --add -- gp 'git push'
 abbr --add -- gd 'git diff'
-
-# add extra funcs
-source ~/.config/fish/funcs.fish
 
