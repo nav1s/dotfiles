@@ -31,6 +31,7 @@ export CALCHISTFILE=$XDG_CACHE_HOME/calc_history
 export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
 export NODE_REPL_HISTORY=$XDG_DATA_HOME/node_repl_history
 export PLATFORMIO_CORE_DIR=$XDG_DATA_HOME/platformio
+export ANDROID_SDK_ROOT="$XDG_DATA_HOME/android/Sdk"
 
 # gui stuff
 
