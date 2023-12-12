@@ -14,10 +14,10 @@ function t
     [ -n "$result" ] && cd -- "$result"
 end
 
-
 # setup command completions
 complete -c cht.sh -xa '$(cht.sh :list)'
 complete -c tldr -xa (tldr --list | sed 's/\W/ /g')
 
 # set ledger journal path
-set --global LEDGER_FILE "$HOME/Notes/Finance/hledger/journal/current.journal"
+set --global --export LEDGER_FILE "$HOME/Notes/finance/hledger/journal/current.journal"
+
