@@ -102,3 +102,6 @@ abbr ps pacman --sync
 abbr pr pacman --remove
 abbr pu pacman --upgrade
 abbr pq pacman --query
+abbr pqi pacman --query --info
+
+abbr bi "bluetoothctl info | grep -i battery"
