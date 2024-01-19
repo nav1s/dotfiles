@@ -121,7 +121,7 @@ menu=(
   [ Hibernate]="systemctl hibernate"
   # [ Lock]="~/.config/i3/scripts/blur-lock"
   [ Lock]=$LOCKSCRIPT
-  [ Logout]="pkill -u $USER"
+  [ Logout]="i3-msg exit"
   [ Cancel]=""
 )
 
