@@ -29,8 +29,9 @@
 #######################################################################
 
 # Use a custom lock script
-#LOCKSCRIPT="i3lock-extra -m pixelize"
-LOCKSCRIPT="i3lock --pass-media-keys --color 000000 --keylayout 2 && playerctl --player=spotify pause"
+#LOCK_SCRIPT="i3lock-extra -m pixelize"
+LOCK_SCRIPT="i3lock --pass-media-keys --color 000000 --keylayout 2 && playerctl --player=spotify pause"
+LOGOUT_SCRIPT="rm /tmp/osui.sock && loginctl terminate-user $USER"
 
 # Colors: FG (foreground), BG (background), HL (highlighted)
 FG_COLOR="#bbbbbb"
@@ -120,8 +121,8 @@ menu=(
   [ Suspend]="systemctl suspend"
   [ Hibernate]="systemctl hibernate"
   # [ Lock]="~/.config/i3/scripts/blur-lock"
-  [ Lock]=$LOCKSCRIPT
-  [ Logout]="i3-msg exit"
+  [ Lock]=$LOCK_SCRIPT
+  [ Logout]=$LOGOUT_SCRIPT
   [ Cancel]=""
 )
 
