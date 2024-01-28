@@ -99,9 +99,14 @@ abbr adp adb pull
 # pacman
 abbr pf pacman --files
 abbr ps pacman --sync
+abbr pss pacman --sync --search
 abbr pr pacman --remove
 abbr pu pacman --upgrade
 abbr pq pacman --query
+abbr pqs pacman --query --search
 abbr pqi pacman --query --info
+
+# yay
+abbr ysi yay --sync --info
 
 abbr bi "bluetoothctl info | grep -i battery"
