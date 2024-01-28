@@ -27,6 +27,7 @@ def timeup_notification():
 
 def get_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument('-l', '--log', action='store_true')
     parser.add_argument('-t', '--time', type=str, help='time to wait')
     return parser.parse_args()
 
@@ -41,16 +42,19 @@ def go_to_sleep(wait_time):
             bar.text('Press any key to continue .....')
             input()
 
-    logging.info(f'Finished pom of {wait_time} minutes')
-    timeup_notification()
-
 def main(): 
     args = get_args()
     if not args.time:
         print('Please supply time to wait')
         return
     
-    go_to_sleep(int(args.time))
+    wait_time = int(args.time)
+    go_to_sleep(wait_time)
+
+    if args.log:
+        logging.info(f'Finished pom of {wait_time} minutes')
+
+    timeup_notification()
     # play a beep sound
     print('\a')
 
