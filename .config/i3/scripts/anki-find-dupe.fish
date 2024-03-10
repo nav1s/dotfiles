@@ -1,5 +1,5 @@
 #!/usr/bin/env fish
-set sleep_time 0.5
+set sleep_time 0.1
 
 sleep $sleep_time
 echo 'Ctrl+shift+x'
@@ -13,7 +13,7 @@ sleep $sleep_time
 echo 'Ctrl+c'
 xdotool key Ctrl+c
 
-xclip -out | rg --only-matching 'paste-.+"' | head --bytes -2 | xclip -selection clipboard
+xclip -out | rg --only-matching paste-[A-Za-z0-9_.]+ | head --lines 1 | xclip -selection clipboard
 
 sleep $sleep_time
 echo 'Ctrl+f'
