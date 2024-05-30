@@ -46,10 +46,13 @@ export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GALLIUM_THREAD=0
 
 # set calibre dark mode
-# export CALIBRE_USE_DARK_PALETTE=1
+export CALIBRE_USE_DARK_PALETTE=1
 
 # set qt apps to use kvantum
-export QT_STYLE_OVERRIDE=kvantum
+# not rly working anymore for some reasson
+# https://github.com/tsujan/Kvantum/issues/952
+# export QT_STYLE_OVERRIDE=kvantum
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 # set GTK theme
 export GTK_THEME=Arc:dark
