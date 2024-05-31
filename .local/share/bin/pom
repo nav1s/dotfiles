@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 from alive_progress import alive_it
+from random import randint
+
 import time
 import os
 import notify2
@@ -7,6 +9,7 @@ import argparse
 import logging
 
 LOG_PATH = os.environ['XDG_CACHE_HOME']
+ODDS = 6
 
 logging.basicConfig(
         level=logging.INFO,
@@ -19,24 +22,49 @@ logging.basicConfig(
 notify2.init('pom')
 
 def timeup_notification():
-    title = 'Time Up'
+    title = 'Time Up (Mindfull comment)'
     notice = notify2.Notification(title)
     notice.set_urgency(notify2.URGENCY_NORMAL)
-    notice.set_timeout(60000)
+    # timeout is in milliseconds so gotta get the rookie numbers up
+    notice.set_timeout(60 * 1000)
     notice.show()
+    play_beep()
+
+def mindful_notification():
+    title = 'It\'s practice with hand breathing time'
+    notice = notify2.Notification(title)
+    notice.set_urgency(notify2.URGENCY_NORMAL)
+    # timeout is in milliseconds so gotta get the rookie numbers up
+    notice.set_timeout(3 * 1000)
+    notice.show()
+    play_beep()
+
 
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-l', '--log', action='store_true')
     parser.add_argument('-t', '--time', type=str, help='time to wait')
+    parser.add_argument('-s', '--subject', type=str, help='current subject')
     return parser.parse_args()
+
+# play a beep sound
+def play_beep():
+    print('\a')
 
 def go_to_sleep(wait_time):
     bar = alive_it(range(60 * wait_time))
+    is_it_mindful_time = randint(0, ODDS)
 
-    for _ in bar:
+    random_time = -1
+    if is_it_mindful_time == ODDS:
+        random_time = randint(0, 60 * wait_time)
+
+    for x in bar:
         try:
+            if x == random_time:
+                mindful_notification()
             time.sleep(1)
+
         except KeyboardInterrupt:
             bar.pause()
             bar.text('Press any key to continue .....')
@@ -52,11 +80,12 @@ def main():
     go_to_sleep(wait_time)
 
     if args.log:
-        logging.info(f'Finished pom of {wait_time} minutes')
+        if args.subject:
+            logging.info(f'Finished pom of {args.subject} for {wait_time} minutes')
+        else:
+            logging.info(f'Finished pom of {wait_time} minutes')
 
     timeup_notification()
-    # play a beep sound
-    print('\a')
 
 
 if __name__ == "__main__":
