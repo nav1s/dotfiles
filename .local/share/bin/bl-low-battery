@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 # rewrite of scripts from https://unix.stackexchange.com/questions/60778/how-can-i-get-an-alert-when-my-battery-is-about-to-die-in-linux-mint
 
-set LOW_BATTERY 40
+set LOW_BATTERY 50
 set ICON /usr/share/icons/Qogir/22/panel/battery-low.svg
 
 set battery_level (
