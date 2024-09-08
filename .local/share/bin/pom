@@ -56,7 +56,7 @@ def go_to_sleep(wait_time):
     is_it_mindful_time = randint(0, ODDS)
 
     random_time = -1
-    if is_it_mindful_time == ODDS:
+    if is_it_mindful_time == ODDS and wait_time >= 5:
         random_time = randint(0, 60 * wait_time)
 
     for x in bar:
