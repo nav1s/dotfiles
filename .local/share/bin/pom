@@ -22,7 +22,7 @@ logging.basicConfig(
 notify2.init('pom')
 
 def timeup_notification():
-    title = 'Time Up (Mindfull comment)'
+    title = 'it\'s mindfull time'
     notice = notify2.Notification(title)
     notice.set_urgency(notify2.URGENCY_NORMAL)
     # timeout is in milliseconds so gotta get the rookie numbers up
