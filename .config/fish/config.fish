@@ -100,11 +100,13 @@ abbr adp adb pull
 abbr pf pacman --files
 abbr ps pacman --sync
 abbr pss pacman --sync --search
+abbr psi pacman --sync --info
 abbr pr pacman --remove
 abbr pu pacman --upgrade
 abbr pq pacman --query
 abbr pqs pacman --query --search
 abbr pqi pacman --query --info
+abbr pql pacman --query --list
 
 # yay
 abbr ysi yay --sync --info
