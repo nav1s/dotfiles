@@ -56,13 +56,17 @@ def go_to_sleep(wait_time):
     is_it_mindful_time = randint(0, ODDS)
 
     random_time = -1
-    if is_it_mindful_time == ODDS and wait_time >= 5:
+    if is_it_mindful_time == ODDS and wait_time >= 6:
         random_time = randint(0, 60 * wait_time)
 
     for x in bar:
         try:
             if x == random_time:
                 mindful_notification()
+                bar.pause()
+                bar.text('Press any key to continue .....')
+                input()
+
             time.sleep(1)
 
         except KeyboardInterrupt:
