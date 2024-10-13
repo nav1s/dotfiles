@@ -59,7 +59,7 @@ abbr --add -- zl "zfs list | rg --invert-match 'var'"
 # docker
 abbr --add -- d 'docker'
 abbr --add -- dc 'docker compose'
-abbr --add -- dco 'docker compose up -d'
+abbr --add -- dco 'docker compose up --detach --pull always --remove-orphans'
 abbr --add -- dcp 'docker compose pull'
 abbr --add -- dcl 'docker compose logs'
 
