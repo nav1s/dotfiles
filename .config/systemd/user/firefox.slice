@@ -1,0 +1,6 @@
+# from: https://www.reddit.com/r/linuxquestions/comments/jfop74/how_to_use_cgroups_to_handle_badly_behaved_google/
+# docs: https://github.com/torvalds/linux/blob/e42b1a9a2557aa94fee47f078633677198386a52/Documentation/admin-guide/cgroup-v2.rst#L1282
+# MemoryHigh = memory.high
+[Slice]
+MemoryHigh=5G
+MemoryMax=max
