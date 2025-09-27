@@ -4,6 +4,8 @@
 # setup delta
 [core]
     pager = delta --dark
+	excludesfile = /home/work/.gitignore_global
+	autocrlf = input
 
 [interactive]
     diffFilter = delta --color-only --dark
