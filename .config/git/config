@@ -20,5 +20,8 @@
 [diff]
     colorMoved = default
 [user]
-	name = root
-	email = root@localhost
+    name = nav1s
+    email = 42621369+nav1s@users.noreply.github.com
+    signingkey = 541D97C7ABC07F39 
+[commit]
+    gpgsign = true
