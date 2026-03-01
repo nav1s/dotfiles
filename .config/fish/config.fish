@@ -112,3 +112,4 @@ abbr pql pacman --query --list
 abbr ysi yay --sync --info
 
 abbr bi "bluetoothctl info | grep -i battery"
+abbr ci codium-insiders
