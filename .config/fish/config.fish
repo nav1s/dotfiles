@@ -113,3 +113,10 @@ abbr ysi yay --sync --info
 
 abbr bi "bluetoothctl info | grep -i battery"
 abbr ci codium-insiders
+
+# pnpm
+set -gx PNPM_HOME "/home/work/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
