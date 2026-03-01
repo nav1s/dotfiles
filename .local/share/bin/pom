@@ -8,12 +8,12 @@ import notify2
 import argparse
 import logging
 
-LOG_PATH = os.environ['XDG_CACHE_HOME']
+LOG_PATH = os.environ['XDG_DATA_HOME']
 ODDS = 6
 
 logging.basicConfig(
         level=logging.INFO,
-        filename=f'{LOG_PATH}/pom/log.txt',
+        filename=f'{LOG_PATH}/sync/portal/pom/log.txt',
         filemode='a',
         format="%(asctime)s: %(message)s",
         datefmt='%H:%M:%S'
