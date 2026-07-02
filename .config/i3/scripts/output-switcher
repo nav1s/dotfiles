@@ -4,6 +4,7 @@
 case $1 in
 
 	"headphones")
+	bluetoothctl connect E8:EE:CC:2E:1E:CF
 	sink=$(pactl list sinks short | grep "bluez_output" | awk '{print $1}')
 	;;
 	"speakers")

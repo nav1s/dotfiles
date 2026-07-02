@@ -1,20 +1,20 @@
 function t
-	set --function result (command tere $argv)
-	[ -n "$result" ] && cd -- "$result"
+    set --function result (command tere $argv)
+    [ -n "$result" ] && cd -- "$result"
 end
 
 function xc
-	echo $argv | xclip -sel clipboard
+    echo $argv | xclip -sel clipboard
 end
 
 function while1
-	set --function cmd $argv  
-	while test 1 -eq 1
-    eval $cmd
-    if test $status -eq 0
-      break
-    end
-    sleep 1
+    set --function cmd $argv
+    while test 1 -eq 1
+        eval $cmd
+        if test $status -eq 0
+            break
+        end
+        sleep 1
     end
 end
 
@@ -26,9 +26,11 @@ complete -x -c tldr -a '(printf "%s\n" ~/.cache/tldr/pages/**/*.md | sed -r "s:^
 
 ## Variables ##
 # set the shell to fish to drop into it when using ranger, su and tmux
-set --global --export SHELL "/usr/bin/fish"
+set --export SHELL /usr/bin/fish
 # set ledger journal path
-set --global --export LEDGER_FILE ~/Notes/finance/hledger/journal/current.journal
+set --export LEDGER_FILE ~/.local/share/sync/portal/important-docs/journal/current.journal
+set -U tide_toolbox_bg_color 008c44
+bind -M insert \cw 'echo 1'
 
 ## Abbreviations ##
 
@@ -57,7 +59,7 @@ abbr --add -- zlt "zfs list -t snapshot | rg --invert-match 'var'"
 abbr --add -- zl "zfs list | rg --invert-match 'var'"
 
 # docker
-abbr --add -- d 'docker'
+abbr --add -- d docker
 abbr --add -- dc 'docker compose'
 abbr --add -- dco 'docker compose up --detach --pull always --remove-orphans'
 abbr --add -- dcp 'docker compose pull'
@@ -89,11 +91,12 @@ abbr --add -- gcd 'git clone --depth 1'
 abbr --add -- gr 'git reset'
 abbr --add -- gp 'git push'
 abbr --add -- gd 'git diff'
+abbr --add -- gre 'git remote'
 
 # adb
 abbr adi adb install
-abbr add adb devices   
-abbr ads adb shell   
+abbr add adb devices
+abbr ads adb shell
 abbr adp adb pull
 
 # pacman
@@ -117,6 +120,6 @@ abbr ci codium-insiders
 # pnpm
 set -gx PNPM_HOME "/home/work/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end

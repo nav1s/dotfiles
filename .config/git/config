@@ -25,3 +25,5 @@
     signingkey = 541D97C7ABC07F39 
 [commit]
     gpgsign = true
+[safe]
+	directory = /home/work/Documents/biu/tashpav/makbiliot/homework/Parallel
