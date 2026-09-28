@@ -2,5 +2,5 @@
 
 setxkbmap -model pc104 -layout us -option grp:alt_shift_toggle
 playerctl --all-players pause
-i3lock --pass-media-keys --color 000000 --keylayout 2 
+i3lock --color 000000
 setxkbmap -model pc104 -layout us,il -option grp:alt_shift_toggle
