@@ -1,4 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# dependencies = [
+# "python-bidi",
+# "dbus-python",
+# "PyGObject",
+# ]
+# ///
 
 import sys
 import dbus
