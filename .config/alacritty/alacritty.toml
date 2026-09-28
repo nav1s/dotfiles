@@ -5,3 +5,6 @@ import = [
 
 [terminal]
   shell = "/usr/bin/fish"
+
+[bell]
+command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/bell.oga"] }
