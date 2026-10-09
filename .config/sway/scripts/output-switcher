@@ -1,0 +1,18 @@
+#/bin/bash
+
+# small script to set default output device
+case $1 in
+
+	"headphones")
+	bluetoothctl connect E8:EE:CC:2E:1E:CF
+	sink=$(pactl list sinks short | grep "bluez_output" | awk '{print $1}')
+	;;
+	"speakers")
+	sink=$(pactl list sinks short | grep "6.analog-stereo" | awk '{print $1}')
+	;;
+
+esac
+
+pactl set-default-sink $sink
+spd-say 'beep'
+
