@@ -1,0 +1,200 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, DejaVuSansMono Nerd Font;
+    font-size: 15px;
+    min-height: 0;
+    background-color: transparent;
+    color: white;
+}
+
+window#waybar {
+    background-color: black;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+
+}
+window#waybar.solo {
+
+}
+*/
+
+window#waybar.urxvt {
+
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#custom-launcher,
+#custom-fan_light,
+#clock,
+#battery,
+#upower,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor {
+    padding: 0 5px;
+    /*margin: 0 4px;*/
+
+}
+
+#window/*,
+#workspaces*/ {
+    margin: 0 4px;
+}
+
+#custom-fan_light {
+    background: #5956e2;
+}
+
+#custom-launcher {
+    background: #5956e2;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > * {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > * {
+    margin-right: 0;
+}
+
+#clock {
+
+}
+
+#battery {
+
+
+}
+
+#battery.charging {
+
+
+}
+
+@keyframes blink {
+    to {
+
+
+    }
+}
+
+#battery.critical:not(.charging) {
+
+
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+
+}
+
+#cpu {
+
+
+}
+
+#memory {
+
+}
+
+#custom-brightness {
+    margin-right: 5px;
+}
+
+#backlight {
+}
+
+#network {
+
+}
+
+#network.disconnected {
+
+}
+
+#pulseaudio.source {
+
+
+}
+
+#wireplumber.sink,
+#pulseaudio.sink {
+}
+
+#pulseaudio.sink.muted {
+    color: #2a5c45;
+}
+
+#temperature {
+
+}
+
+#temperature.critical {
+    color: #eb4d4b;
+}
+
+#tray {
+
+}
+
+#idle_inhibitor {
+    margin-right: 2px;
+}
+
+#idle_inhibitor.activated {
+
+
+}
+
+#language {
+    margin-right: 5px;
+}
+

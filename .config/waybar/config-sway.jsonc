@@ -1,0 +1,194 @@
+{
+  // "layer": "top", // Waybar at top layer
+
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 19, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+
+  // Choose the order of the modules
+  "modules-left": [
+    "custom/launcher",
+    "sway/workspaces",
+    "sway/mode",
+    "custom/fan_light",
+    "tray",
+  ],
+  "modules-center": ["sway/window"],
+  "modules-right": [
+    "network",
+    "memory",
+    "cpu",
+    "battery",
+    "temperature",
+    "wireplumber#sink",
+    "pulseaudio#source",
+    "idle_inhibitor",
+    "custom/brightness",
+    "backlight",
+    "sway/language",
+    "clock",
+  ],
+
+  // Modules configuration
+  "sway/workspaces": {
+    //	 "disable-scroll": true,
+    "all-outputs": true,
+  },
+
+  "sway/language": {
+    "on-click": "swaymsg input '*' xkb_switch_layout next",
+    "on-scroll-up": "swaymsg input '*' xkb_switch_layout next",
+    "on-scroll-down": "swaymsg input '*' xkb_switch_layout prev",
+    "format": "{} 󰌓",
+    "tooltip": false,
+  },
+
+  "sway/window": {
+    "tooltip": false,
+  },
+
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>",
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
+      "tooltip": false,
+    },
+  },
+
+  "tray": {
+    "spacing": 10,
+  },
+
+  "clock": {
+    "interval": 1,
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%T %a}",
+    "format-alt": "{:%d/%m/%Y}",
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": "{usage}% ",
+    "tooltip": false,
+  },
+
+  "memory": {
+    "interval": 1,
+    "format": "{}% ",
+  },
+
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "interval": 1,
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false,
+  },
+
+  "custom/fan_light": {
+    "format": "󱐞",
+    "on-click": "rgbw",
+    "on-click-right": "$(${XDG_CONFIG_HOME:-~/.config}/scripts/light.py -p toggle)",
+    "on-scroll-up": "$(${XDG_CONFIG_HOME:-~/.config}/scripts/light.py -l +0.01)",
+    "on-scroll-down": "$(${XDG_CONFIG_HOME:-~/.config}/scripts/light.py -l -0.01)",
+    "tooltip": false,
+  },
+
+  "backlight": {
+    "device": "amdgpu_bl0",
+    "escape": true,
+    "format": "{percent}% {icon}",
+    "format-icons": ["🌕", "🌔", "🌓", "🌒", "🌑"],
+    "on-scroll-up": "light -a1 -A 1",
+    "on-scroll-down": "light -a1 -U 1",
+    "on-click-middle": "if [ $(light -G) -lt 50 ]; then light -S 100; else light -S 0; fi",
+  },
+  //ddcutil version
+  "custom/brightness": {
+    "format": "{text}% {icon}",
+    "format-icons": ["\uDB80\uDCDE", "\uDB80\uDCDF", "\uDB80\uDCE0"],
+    "exec": "ddcutil --terse -b 4 getvcp 10 | awk '{print $4*100/$5}'",
+    "on-scroll-up": "ddcutil -b 4 setvcp 10 + 10",
+    "on-scroll-down": "ddcutil -b 4 setvcp 10 - 10",
+    "on-click": "ddcutil -b 4 setvcp 10 0",
+    "on-click-right": "ddcutil -b 4 setvcp 10 100",
+    "interval": 1,
+    "tooltip": false,
+  },
+
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-good": "", // An empty format will hide the module
+    "format-full": "",
+    "format-icons": ["", "", "", "", ""],
+  },
+
+  "network": {
+    "interval": 2,
+    "format-wifi": "{essid} ({signalStrength}%), down: {bandwidthDownOctets}, up: {bandwidthUpOctets} ",
+    "format-ethernet": "down: {bandwidthDownBits}, up: {bandwidthUpBits} 󰈀",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+  },
+
+  "wireplumber#sink": {
+    "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon} ",
+    "format-bluetooth-muted": "ﱝ {icon} ",
+    "format-muted": "ﱝ",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", "墳"],
+    },
+    "on-click-middle": "${XDG_CONFIG_HOME:-~/.config}/sway/scripts/nextNode.sh sink",
+    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+  },
+
+  "pulseaudio#source": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["奄", "奔", "墳"],
+    },
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 1%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 1%-",
+    "on-click-middle": "${XDG_CONFIG_HOME:-~/.config}/sway/scripts/nextNode.sh source",
+    "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+  },
+
+  "custom/launcher": {
+    "format": "",
+    "on-click-right": "bemenu-run -l 4 -c",
+    "on-click": "bemenu-run -l 4 -c",
+    "tooltip": false,
+    "rotate": 270,
+  },
+}
