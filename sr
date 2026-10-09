@@ -1,0 +1,5 @@
+#!/bin/sh
+# Import environment.d definitions into the session
+eval "$(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)"
+
+exec ssh-agent sway "$@"
