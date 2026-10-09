@@ -6,6 +6,12 @@ set $mod Mod4
 # configuration for workspace behaviour: #
 ##########################################
 
+input type:keyboard {
+    xkb_layout us,il
+    xkb_options grp:alt_shift_toggle
+}
+
+output * bg "~/Pictures/galaxy.jpg" fill
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
