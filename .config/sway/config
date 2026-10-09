@@ -175,7 +175,6 @@ mode "resize" {
 exec_always --no-startup-id dunst --config ~/.config/dunst/dunstrc
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id copyq
-exec_always --no-startup-id source ~/.fehbg
 ###############
 # system tray #
 ###############

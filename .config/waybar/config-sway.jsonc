@@ -10,7 +10,7 @@
     "custom/launcher",
     "sway/workspaces",
     "sway/mode",
-    "custom/fan_light",
+    // "custom/fan_light",
     "tray",
   ],
   "modules-center": ["sway/window"],
