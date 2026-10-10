@@ -146,37 +146,37 @@
   },
 
   "wireplumber#sink": {
-    "scroll-step": 1, // %, can be a float
+    "scroll-step": 5, // can be a float
     "format": "{volume}% {icon}",
     "format-bluetooth": "{volume}% {icon} ",
-    "format-bluetooth-muted": "ﱝ {icon} ",
-    "format-muted": "ﱝ",
+    "format-bluetooth-muted": "󰖁 {icon} ",
+    "format-muted": "󰖁",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "headphone": "",
+      "hands-free": "󰋎",
+      "headset": "󰋎",
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", "墳"],
+      "default": ["", "", ""],
     },
     "on-click-middle": "${XDG_CONFIG_HOME:-~/.config}/sway/scripts/nextNode.sh sink",
     "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
   },
 
   "pulseaudio#source": {
-    // "scroll-step": 1, // %, can be a float
+    "scroll-step": 5, // can be a float
     "format": "{format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "headphone": "",
+      "hands-free": "󰋎",
+      "headset": "󰋎",
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["奄", "奔", "墳"],
+      "default": [""],
     },
     "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 1%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 1%-",
