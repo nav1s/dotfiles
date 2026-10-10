@@ -15,7 +15,7 @@ input type:keyboard {
     xkb_options grp:alt_shift_toggle
 }
 
-output * bg /home/work/Pictures/galaxy.jpg stretch
+output * bg ~/bg.jpg fill
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -34,17 +34,17 @@ set $ws10 "10"
 # workspace layout: #
 #####################
 
-workspace_layout default
+workspace_layout tabbed
 
 ##############################
 # extra options for windows: #
 ##############################
 
 # border indicator on windows:
-default_border pixel 1
+default_border pixel 2
 
-gaps inner 2
-gaps outer 2
+gaps inner  5
+gaps outer  5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
@@ -180,6 +180,7 @@ mode "resize" {
 exec_always --no-startup-id dunst --config ~/.config/dunst/dunstrc
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id copyq
+exec swayidle -w timeout 600 '~/.config/sway/scripts/smart-idle.sh' before-sleep '~/.config/sway/scripts/swaylock-blur.sh'
 ###############
 # system tray #
 ###############
