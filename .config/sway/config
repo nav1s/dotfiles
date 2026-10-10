@@ -58,23 +58,23 @@ floating_modifier $mod
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
+bindsym --to-code $mod+Tab workspace back_and_forth
+bindsym --to-code $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
-bindsym $mod+b workspace next
-bindsym $mod+Shift+b workspace prev
+bindsym --to-code $mod+b workspace next
+bindsym --to-code $mod+Shift+b workspace prev
 
 # switch to workspace
-bindsym $mod+1    workspace  $ws1
-bindsym $mod+2    workspace  $ws2
-bindsym $mod+3    workspace  $ws3
-bindsym $mod+4    workspace  $ws4
-bindsym $mod+5    workspace  $ws5
-bindsym $mod+6    workspace  $ws6
-bindsym $mod+7    workspace  $ws7
-bindsym $mod+8    workspace  $ws8
-bindsym $mod+9    workspace  $ws9
-bindsym $mod+0    workspace  $ws10
+bindsym --to-code $mod+1    workspace  $ws1
+bindsym --to-code $mod+2    workspace  $ws2
+bindsym --to-code $mod+3    workspace  $ws3
+bindsym --to-code $mod+4    workspace  $ws4
+bindsym --to-code $mod+5    workspace  $ws5
+bindsym --to-code $mod+6    workspace  $ws6
+bindsym --to-code $mod+7    workspace  $ws7
+bindsym --to-code $mod+8    workspace  $ws8
+bindsym --to-code $mod+9    workspace  $ws9
+bindsym --to-code $mod+0    workspace  $ws10
 
 # switch to workspace with numpad keys
 bindcode $mod+87 workspace 1
@@ -101,28 +101,28 @@ bindcode $mod+Mod2+81 workspace $ws9
 bindcode $mod+Mod2+90 workspace $ws10
 
 # Move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace $ws1
-bindsym $mod+Ctrl+2 move container to workspace $ws2
-bindsym $mod+Ctrl+3 move container to workspace $ws3
-bindsym $mod+Ctrl+4 move container to workspace $ws4
-bindsym $mod+Ctrl+5 move container to workspace $ws5
-bindsym $mod+Ctrl+6 move container to workspace $ws6
-bindsym $mod+Ctrl+7 move container to workspace $ws7
-bindsym $mod+Ctrl+8 move container to workspace $ws8
-bindsym $mod+Ctrl+9 move container to workspace $ws9
-bindsym $mod+Ctrl+0 move container to workspace $ws10
+bindsym --to-code $mod+Ctrl+1 move container to workspace $ws1
+bindsym --to-code $mod+Ctrl+2 move container to workspace $ws2
+bindsym --to-code $mod+Ctrl+3 move container to workspace $ws3
+bindsym --to-code $mod+Ctrl+4 move container to workspace $ws4
+bindsym --to-code $mod+Ctrl+5 move container to workspace $ws5
+bindsym --to-code $mod+Ctrl+6 move container to workspace $ws6
+bindsym --to-code $mod+Ctrl+7 move container to workspace $ws7
+bindsym --to-code $mod+Ctrl+8 move container to workspace $ws8
+bindsym --to-code $mod+Ctrl+9 move container to workspace $ws9
+bindsym --to-code $mod+Ctrl+0 move container to workspace $ws10
 
 # Move to workspace with focused container
-bindsym $mod+Shift+1    move container to workspace  $ws1; workspace $ws1
-bindsym $mod+Shift+2    move container to workspace  $ws2; workspace $ws2
-bindsym $mod+Shift+3    move container to workspace  $ws3; workspace $ws3
-bindsym $mod+Shift+4    move container to workspace  $ws4; workspace $ws4
-bindsym $mod+Shift+5    move container to workspace  $ws5; workspace $ws5
-bindsym $mod+Shift+6    move container to workspace  $ws6; workspace $ws6
-bindsym $mod+Shift+7    move container to workspace  $ws7; workspace $ws7
-bindsym $mod+Shift+8    move container to workspace  $ws8; workspace $ws8
-bindsym $mod+Shift+9    move container to workspace  $ws9; workspace $ws9
-bindsym $mod+Shift+0    move container to workspace  $ws10; workspace $ws10
+bindsym --to-code $mod+Shift+1    move container to workspace  $ws1; workspace $ws1
+bindsym --to-code $mod+Shift+2    move container to workspace  $ws2; workspace $ws2
+bindsym --to-code $mod+Shift+3    move container to workspace  $ws3; workspace $ws3
+bindsym --to-code $mod+Shift+4    move container to workspace  $ws4; workspace $ws4
+bindsym --to-code $mod+Shift+5    move container to workspace  $ws5; workspace $ws5
+bindsym --to-code $mod+Shift+6    move container to workspace  $ws6; workspace $ws6
+bindsym --to-code $mod+Shift+7    move container to workspace  $ws7; workspace $ws7
+bindsym --to-code $mod+Shift+8    move container to workspace  $ws8; workspace $ws8
+bindsym --to-code $mod+Shift+9    move container to workspace  $ws9; workspace $ws9
+bindsym --to-code $mod+Shift+0    move container to workspace  $ws10; workspace $ws10
 
 # move focused container to workspace with numpad keys
 bindcode $mod+Shift+Mod2+87   move container to workspace  $ws1; workspace $ws1
@@ -149,27 +149,27 @@ bindcode $mod+Shift+81   move container to workspace  $ws9; workspace $ws9
 bindcode $mod+Shift+90   move container to workspace  $ws10; workspace $ws10
 
 # Resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
+bindsym --to-code $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym j resize grow height 5 px or 5 ppt
-        bindsym k resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+        bindsym --to-code h resize shrink width 5 px or 5 ppt
+        bindsym --to-code j resize grow height 5 px or 5 ppt
+        bindsym --to-code k resize shrink height 5 px or 5 ppt
+        bindsym --to-code l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym --to-code Left resize shrink width 10 px or 10 ppt
+        bindsym --to-code Down resize grow height 10 px or 10 ppt
+        bindsym --to-code Up resize shrink height 10 px or 10 ppt
+        bindsym --to-code Right resize grow width 10 px or 10 ppt
 
         # exit resize mode: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+        bindsym --to-code Return mode "default"
+        bindsym --to-code Escape mode "default"
 }
 
 
@@ -194,122 +194,122 @@ exec --no-startup-id if ! pgrep aw-qt &> /dev/null; then sleep 5; aw-qt; fi
 exec_always "killall waybar 2> /dev/null; waybar -l error -c ${XDG_CONFIG_HOME:-$HOME/.config}/waybar/config-sway.jsonc"
 
 # empty the trash
-exec_always --no-startup-id /usr/bin/trash-empty 30
+exec --no-startup-id /usr/bin/trash-empty 30
 
 # get yadm updates
-exec_always --no-startup-id yadm remote update
+exec --no-startup-id yadm remote update
 
 ######################################
 # keybindings for different actions: #
 ######################################
 
-bindsym $mod+ctrl+p move workspace to output next
+bindsym --to-code $mod+ctrl+p move workspace to output right
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym --to-code $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
-bindsym $mod+q kill
+bindsym --to-code $mod+q kill
 
-bindsym $mod+x exec --no-startup-id ~/.config/sway/scripts/swaylock-blur.sh
+bindsym --to-code $mod+x exec --no-startup-id ~/.config/sway/scripts/swaylock-blur.sh
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym --to-code $mod+Shift+c reload
 
 # keybinding in fancy rofi (automated):
-bindsym $mod+F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
+bindsym --to-code $mod+F1 exec --no-startup-id ~/.config/sway/scripts/keyhint-2
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym --to-code XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym --to-code XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym --to-code $mod+h focus left
+bindsym --to-code $mod+j focus down
+bindsym --to-code $mod+k focus up
+bindsym --to-code $mod+l focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym --to-code $mod+Shift+h move left
+bindsym --to-code $mod+Shift+j move down
+bindsym --to-code $mod+Shift+k move up
+bindsym --to-code $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+c split h; exec --no-startup-id notify-send "tile horizontally"
+bindsym --to-code $mod+c split h; exec --no-startup-id notify-send "tile horizontally"
 
 # split in vertical orientation
-bindsym $mod+v split v; exec --no-startup-id notify-send "tile vertically"
+bindsym --to-code $mod+v split v; exec --no-startup-id notify-send "tile vertically"
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym --to-code $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+g layout tabbed
-bindsym $mod+e layout toggle split
+bindsym --to-code $mod+s layout stacking
+bindsym --to-code $mod+g layout tabbed
+bindsym --to-code $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym --to-code $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym --to-code $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym --to-code $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym --to-code $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
-bindsym $mod+z --release exec --no-startup-id dunstctl close-all
+bindsym --to-code $mod+minus scratchpad show
+bindsym --to-code $mod+z --release exec --no-startup-id dunstctl close-all
 
 ## App shortcuts
-bindsym $mod+w exec /usr/bin/firefox
-bindsym $mod+n exec /usr/bin/thunar
-bindsym Print exec flameshot gui
-bindsym $mod+Ctrl+m exec pavucontrol
-bindsym $mod+Ctrl+x --release exec xkill
+bindsym --to-code $mod+w exec /usr/bin/firefox -P private
+bindsym --to-code $mod+n exec /usr/bin/thunar
+bindsym --to-code Print exec flameshot gui
+bindsym --to-code $mod+Ctrl+m exec pavucontrol
+bindsym --to-code $mod+Ctrl+x --release exec xkill
 
 # fancy rofi stuff
-bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
-bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
-bindsym $mod+t exec --no-startup-id rofi -show window -config ~/.config/rofi/rofidmenu.rasi
+bindsym --to-code $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
+bindsym --to-code $mod+d exec --no-startup-id rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
+bindsym --to-code $mod+t exec --no-startup-id rofi -show window -config ~/.config/rofi/rofidmenu.rasi
 
 # toggle copyq
-bindsym $mod+ctrl+h exec copyq toggle
+bindsym --to-code $mod+ctrl+h exec copyq toggle
 
 mode "pass-through" {
-    bindsym $mod+Shift+t mode "default"
+    bindsym --to-code $mod+Shift+t mode "default"
 }
 
-bindsym $mod+Shift+t mode "pass-through"
+bindsym --to-code $mod+Shift+t mode "pass-through"
 
-bindsym $mod+Shift+s exec --no-startup-id xrandr --output eDP --auto
+bindsym --to-code $mod+Shift+s exec swaymsg output eDP-1 enable
 
-bindsym $mod+shift+n mode "anki-utils"
+bindsym --to-code $mod+shift+n mode "anki-utils"
 mode "anki-utils" {
-        bindsym a exec --no-startup-id ~/.config/i3/scripts/anki-utils/anki-find-dupe.fish; mode "default"
-        bindsym s exec --no-startup-id ~/.config/i3/scripts/anki-utils/anki-remove-close.fish ; mode "default"
-        bindsym d exec --no-startup-id ~/.config/i3/scripts/anki-utils/anki-correct-cloze.fish; mode "default"
+        bindsym --to-code a exec --no-startup-id ~/.config/i3/scripts/anki-utils/anki-find-dupe.fish; mode "default"
+        bindsym --to-code s exec --no-startup-id ~/.config/i3/scripts/anki-utils/anki-remove-close.fish ; mode "default"
+        bindsym --to-code d exec --no-startup-id ~/.config/i3/scripts/anki-utils/anki-correct-cloze.fish; mode "default"
 
         # exit anki-tools mode: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+        bindsym --to-code Return mode "default"
+        bindsym --to-code Escape mode "default"
 }
 
-bindsym $mod+p mode "screenshot-utils"
+bindsym --to-code $mod+p mode "screenshot-utils"
 mode "screenshot-utils" {
-        bindsym a exec flameshot gui
-        bindsym d exec flameshot gui --invert --region 837x926+91+120
-        bindsym f exec flameshot gui --region 837x926+91+120
+        bindsym --to-code a exec flameshot gui
+        bindsym --to-code d exec flameshot gui --invert --region 837x926+91+120
+        bindsym --to-code f exec flameshot gui --region 837x926+91+120
 
         # exit anki-tools mode: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+        bindsym --to-code Return mode "default"
+        bindsym --to-code Escape mode "default"
 }
 
 ##########################################
@@ -318,29 +318,29 @@ mode "screenshot-utils" {
 
 # volume control
 # increase
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
-bindsym $mod+Up exec --no-startup-id  pactl set-sink-volume @DEFAULT_SINK@ +2%
-bindsym $mod+Ctrl+Up exec --no-startup-id  pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym --to-code XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym --to-code $mod+Up exec --no-startup-id  pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym --to-code $mod+Ctrl+Up exec --no-startup-id  pactl set-sink-volume @DEFAULT_SINK@ +10%
 
 # decrease
-bindsym XF86AudioLowerVolume exec --no-startup-id  pactl set-sink-volume @DEFAULT_SINK@ -2%
-bindsym $mod+Down exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
-bindsym $mod+Ctrl+Down exec --no-startup-id  pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym --to-code XF86AudioLowerVolume exec --no-startup-id  pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym --to-code $mod+Down exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym --to-code $mod+Ctrl+Down exec --no-startup-id  pactl set-sink-volume @DEFAULT_SINK@ -10%
 
 # mute
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym --to-code XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym --to-code $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # bind default audio keys 
-bindsym XF86AudioPlay exec --no-startup-id playerctl --player=mpv play-pause & playerctl --player=spotify play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym --to-code XF86AudioPlay exec --no-startup-id playerctl --player=mpv play-pause & playerctl --player=spotify play-pause
+bindsym --to-code XF86AudioNext exec --no-startup-id playerctl next
+bindsym --to-code XF86AudioPrev exec --no-startup-id playerctl previous
 
-bindsym $mod+Ctrl+space exec --no-startup-id playerctl --player=mpv play-pause & playerctl --player=spotify play-pause
-bindsym $mod+Right exec --no-startup-id playerctl --player=mpv next & playerctl --player=spotify next
-bindsym $mod+Left exec --no-startup-id playerctl --player=mpv previous & playerctl --player=spotify previous
+bindsym --to-code $mod+Ctrl+space exec --no-startup-id playerctl --player=mpv play-pause & playerctl --player=spotify play-pause
+bindsym --to-code $mod+Right exec --no-startup-id playerctl --player=mpv next & playerctl --player=spotify next
+bindsym --to-code $mod+Left exec --no-startup-id playerctl --player=mpv previous & playerctl --player=spotify previous
 
 # Set default sink
-bindsym $mod+Shift+Up exec --no-startup-id ~/.config/i3/scripts/output-switcher headphones
-bindsym $mod+Shift+Down exec --no-startup-id ~/.config/i3/scripts/output-switcher speakers
+bindsym --to-code $mod+Shift+Up exec --no-startup-id ~/.config/i3/scripts/output-switcher headphones
+bindsym --to-code $mod+Shift+Down exec --no-startup-id ~/.config/i3/scripts/output-switcher speakers
 
