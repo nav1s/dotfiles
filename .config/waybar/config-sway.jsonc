@@ -186,8 +186,8 @@
 
   "custom/launcher": {
     "format": "",
-    "on-click-right": "bemenu-run -l 4 -c",
-    "on-click": "bemenu-run -l 4 -c",
+    "on-click-right": "rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi",
+    "on-click": "rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi",
     "tooltip": false,
     "rotate": 270,
   },
