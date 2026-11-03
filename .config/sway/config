@@ -3,7 +3,10 @@ font pango: Noto Sans Regular 10
 set $mod Mod4
 xwayland on
 seat seat0 xcursor_theme Adwaita
-output eDP-1 disable
+
+output HDMI-A-1 position 0 0
+output eDP-1 position 1920 0
+
 for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0, focus
 
 ##########################################
@@ -266,14 +269,14 @@ bindsym --to-code $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym --to-code $mod+minus scratchpad show
-bindsym --to-code $mod+z --release exec --no-startup-id dunstctl close-all
+bindsym --to-code $mod+z exec --no-startup-id dunstctl close-all
 
 ## App shortcuts
 bindsym --to-code $mod+w exec /usr/bin/firefox -P private
 bindsym --to-code $mod+n exec /usr/bin/thunar
 bindsym --to-code Print exec flameshot gui
 bindsym --to-code $mod+Ctrl+m exec pavucontrol
-bindsym --to-code $mod+Ctrl+x --release exec xkill
+bindsym --to-code $mod+Ctrl+x exec xkill
 
 # fancy rofi stuff
 bindsym --to-code $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
