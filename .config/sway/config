@@ -5,6 +5,10 @@ xwayland on
 seat seat0 xcursor_theme Adwaita
 for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0, focus
 
+output HDMI-A-1 position 1920 0
+output eDP-1 position 0 0
+
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XAUTHORITY
 ##########################################
 # configuration for workspace behaviour: #
 ##########################################
@@ -188,7 +192,7 @@ exec swayidle -w timeout 600 '~/.config/sway/scripts/smart-idle.sh' before-sleep
 
 exec --no-startup-id keepassxc
 exec_always --no-startup-id thunar --daemon
-exec_always --no-startup-id flameshot 
+exec --no-startup-id flameshot 
 exec_always --no-startup-id if ! pgrep opensnitch-ui &> /dev/null; then opensnitch-ui; fi
 exec --no-startup-id if ! pgrep aw-qt &> /dev/null; then sleep 5; aw-qt; fi
 exec_always "killall waybar 2> /dev/null; waybar -l error -c ${XDG_CONFIG_HOME:-$HOME/.config}/waybar/config-sway.jsonc"
