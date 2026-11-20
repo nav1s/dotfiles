@@ -13,3 +13,6 @@ command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/be
 key = "Return"
 mods = "Shift"
 chars = "\u001B\r"
+
+[selection]
+save_to_clipboard = true
